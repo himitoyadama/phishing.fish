@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>PhishingSite</title>
+	<style>
+		.warning {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			background-color: #FF5733;
+			color: white;
+			font-size: 16px;
+			padding: 20px;
+		}
+
+		.warning i {
+			font-size: 24px;
+			margin-bottom: 10px;
+		}
+
+		.warning p {
+			margin: 0;
+			text-align: center;
+		}
+
+		.center {
+			text-align: center;
+			background-color: black;
+		}
+
+		.center img {
+			max-width: 100%;
+			height: auto;
+		}
+
+		.center2 {
+			text-align: center;
+			color: red;
+			font-size: 30px;
+			margin: 20px 0;
+		}
+
+		@media screen and (min-width: 768px) {
+			.warning {
+				flex-direction: row;
+				font-size: 24px;
+			}
+
+			.warning i {
+				font-size: 32px;
+				margin-bottom: 0;
+				margin-right: 10px;
+			}
+
+			.warning p {
+				text-align: left;
+			}
+
+			.center {
+				background-color: black;
+				padding: 50px;
+			}
+
+			.center img {
+				max-width: 70%;
+			}
+
+			.center2 {
+				font-size: 80px;
+				margin: 50px 0;
+			}
+		}
+	</style>
+</head>
+<body>
+	<div class="warning">
+		<i class="fas fa-exclamation-triangle"></i>
+		<p>警告！お支払いがまだ完了しておりません。</p>
+	</div>
+	<div class="center">
+		<img src="mal.jpg">
+	</div>
+	<div class="center2">
+		<p>このサイトは安全ではありません。</p>
+	</div>
+	<script>
+		const warningDiv = document.querySelector('.warning');
+
+		warningDiv.addEventListener('click', () => {
+			alert('このサイトは危険です！すぐに閉じてください。');
+		});
+	</script>
+</body>
+</html>
