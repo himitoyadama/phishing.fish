@@ -6,6 +6,10 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>PhishingSite</title>
 	<style>
+		body {
+			background-color: black;
+			margin: 0;
+		}
 		.warning {
 			display: flex;
 			flex-direction: column;
@@ -13,13 +17,13 @@
 			justify-content: center;
 			background-color: #FF5733;
 			color: white;
-			font-size: 16px;
+			font-size: 12px;
 			padding: 20px;
 		}
 
 		.warning i {
-			font-size: 24px;
-			margin-bottom: 10px;
+			font-size: 20px;
+			
 		}
 
 		.warning p {
@@ -40,11 +44,16 @@
 		.center2 {
 			text-align: center;
 			color: red;
-			font-size: 30px;
-			margin: 20px 0;
+			font-size: 16px;
+			
+			
 		}
 
 		@media screen and (min-width: 768px) {
+			body {
+				background-color: black;
+				margin: 0;
+			}
 			.warning {
 				flex-direction: row;
 				font-size: 24px;
@@ -52,8 +61,7 @@
 
 			.warning i {
 				font-size: 32px;
-				margin-bottom: 0;
-				margin-right: 10px;
+				
 			}
 
 			.warning p {
@@ -62,19 +70,25 @@
 
 			.center {
 				background-color: black;
-				padding: 50px;
 			}
-
 			.center img {
 				max-width: 70%;
+				
 			}
 
 			.center2 {
+				
+				text-align: center;
+				color: red;
 				font-size: 80px;
-				margin: 50px 0;
+				/*position: absolute;*/
+				
 			}
+			
+			
 		}
 	</style>
+	<link rel="stylesheet" href="mal.css">
 </head>
 <body>
 	<div class="warning">
@@ -84,9 +98,9 @@
 	<div class="center">
 		<img src="mal.jpg">
 	</div>
-	<div class="center2">
-		<p>このサイトは安全ではありません。</p>
-	</div>
+	<div class="center2">このサイトは安全ではありません。</div>
+		
+	
 	<script>
 		const warningDiv = document.querySelector('.warning');
 
@@ -96,3 +110,4 @@
 	</script>
 </body>
 </html>
+
